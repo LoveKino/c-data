@@ -1,0 +1,34 @@
+{
+  "name": "c-data",
+  "version": "0.0.1",
+  "description": "basic composable, immutable data structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"test/function/**/*.js\"",
+    "unit-test": "deftest -s src -d test/unit/dest -t test/unit/test",
+    "unit-test-watch": "deftest -s src -d test/unit/dest -t test/unit/test --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoveKino/c-data.git"
+  },
+  "keywords": [
+    "composable",
+    "immutable",
+    "data",
+    "structure"
+  ],
+  "author": "ddchen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LoveKino/c-data/issues"
+  },
+  "homepage": "https://github.com/LoveKino/c-data#readme",
+  "devDependencies": {
+    "defcomment": "^0.4.7",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "basetype": "^0.1.4"
+  }
+}
