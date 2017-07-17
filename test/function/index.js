@@ -1,20 +1,20 @@
 'use strict';
 
 let {
-    object, array
+    o, a
 } = require('../..');
 let assert = require('assert');
 
 describe('index', () => {
     it('base', () => {
-        let v = object('a', 3);
+        let v = o('a', 3);
         assert.deepEqual(v, {
             a: 3
         });
     });
 
     it('immutable', (done) => {
-        let v = object('a', 3);
+        let v = o('a', 3);
         try {
             v.b = 10;
         } catch (err) {
@@ -24,13 +24,13 @@ describe('index', () => {
     });
 
     it('composable form', () => {
-        let v = object(
-            'a', object(
+        let v = o(
+            'a', o(
                 'b', 1,
                 'c', 2
             ),
 
-            'd', array(1, 2, 3)
+            'd', a(1, 2, 3)
         );
 
         assert.deepEqual(v, {
@@ -45,9 +45,9 @@ describe('index', () => {
 
     it('composable illegal form', (done) => {
         try {
-            object(1, {});
+            o(1, {});
         } catch (err) {
-            assert.deepEqual(err.toString().indexOf('try to define prop to a internel object') !== -1, true);
+            assert.deepEqual(err.toString().indexOf('try to define prop to a internel o') !== -1, true);
             done();
         }
     });

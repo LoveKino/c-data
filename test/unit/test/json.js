@@ -7,7 +7,7 @@ let cases = [];
 
 
 
-var testRets = runCases(cases, '/Users/yuer/workspaceforme/category/career/container/opensource/c-data/test/unit/dest/index.js');
+var testRets = runCases(cases, '/Users/yuer/workspaceforme/category/career/container/opensource/c-data/test/unit/dest/json.js');
 
 if(typeof module === 'object') {
     module.exports = testRets;
